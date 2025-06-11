@@ -60,6 +60,7 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    overflow-x: hidden;
 }
 
 .hero-image img {
@@ -308,8 +309,9 @@ main {
 
 .pricing-plans {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 4vw;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    column-gap: 4vw;
+    row-gap: 3rem;
     margin-top: 3rem;
 }
 
@@ -357,8 +359,9 @@ main {
     width: 100%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 4vw;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    column-gap: 4vw;
+    row-gap: 3rem;
     margin-top: 7rem;
 }
 
@@ -518,4 +521,179 @@ main {
 .intro-subtitle {
     margin-top: 2rem;
     margin-bottom: 1rem;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    .hero-image img {
+        max-width: 473px;
+        width: 100%;
+    }
+
+    .hero-title {
+        font-size: 60px;
+    }
+
+    .services-container {
+        padding: 3rem 2rem;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .hero-content {
+        flex-direction: column;
+        margin-top: 3rem;
+        padding-bottom: 10rem;
+        gap: 1rem;
+    }
+
+    .hero-title {
+        font-size: 50px;
+    }
+
+    .hero-logo img {
+        max-width: 250px;
+        width: 100%;
+    }
+
+    .growth-container {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .growth-image img {
+        top: 0;
+    }
+
+    .services-container {
+        flex-direction: column;
+        padding-top: 10rem;
+    }
+
+    .services-image img {
+        top: 0;
+    }
+
+    .work-container {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .work-image img {
+        top: 0;
+    }
+
+    .volt-crew {
+        max-width: 330px;
+        width: 100%;
+    }
+
+    .plan-title {
+        font-size: 30px;
+    }
+
+    .plan-price {
+        font-size: 26px;
+    }
+
+    .testimonial-quote {
+        font-size: 22px;
+    }
+
+    .testimonial-source,
+    .intro-description {
+        font-size: 17px;
+    }
+
+    .plan-description {
+        font-size: 18px;
+    }
+
+    .plan-btn a {
+        font-size: 18px;
+    }
+
+    .site-header {
+        padding: 0;
+    }
+
+    .main-nav {
+        padding: 20px;
+        padding-bottom: 3px;
+    }
+
+    .hero-container {
+        padding: 0 20px;
+    }
+
+    .growth-container {
+        padding: 0 20px;
+    }
+
+    .services-container {
+        padding: 11rem 20px;
+    }
+
+    .work-container,
+    .pricing-container {
+        padding: 0 20px;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .footer-contact {
+        display: none;
+    }
+
+    .footer-logo img {
+        width: 150px;
+    }
+
+    .hero-logo img {
+        max-width: 150px;
+        width: 100%;
+    }
+
+    .growth-title,
+    .services-title,
+    .work-title,
+    .pricing-title,
+    .intro-title, .intro-subtitle {
+        font-size: 35px;
+    }
+
+    .footer-logo {
+        padding-bottom: 7rem;
+    }
+
+    .footer-links {
+        gap: 1rem;
+    }
+
+    .footer-container {
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .footer-links a {
+        font-size: 12px;
+    }
+
+    .volt-crew {
+        right: -70px;
+        pointer-events: none;
+    }
+
+        .hero-title {
+        font-size: 45px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+        .hero-title {
+        font-size: 37px;
+    }
 }
